@@ -51,7 +51,7 @@ and all projects will derive out from there
 
 ** Emacs
 :LOGBOOK:
-CLOCK: [2023-10-31 Tue 14:27]
+CLOCK: [2023-10-31 Tue 14:27]--[2023-10-31 Tue 14:57] =>  0:30
 :END:
 #+begin_src emacs-lisp -n :exports both
   (princ (concat
