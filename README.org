@@ -1,0 +1,75 @@
+#+AUTHOR:    Anton S. Kosinov
+#+TITLE:     Mental Athlete's Py-roject
+#+SUBTITLE:  Life in a plain text
+#+EMAIL:     a.s.kosinov@gmail.com
+#+LANGUAGE: en
+#+STARTUP: showall indent
+#+OPTIONS: tags:nil num:nil @:t ::t ^:{} _:{} *:t pri:nil
+#+TOC: headlines 2
+#+PROPERTY:header-args :eval never-export
+#+CATEGORY: Primal
+#+TODO: RAW INIT TODO ACTIVE | DONE
+
+* Sample Pythonic Module as a Project
+SCHEDULED: <2023-10-31 Tue>
+:LOGBOOK:
+CLOCK: [2023-10-31 Tue 13:56]--[2023-10-31 Tue 14:01] =>  0:05
+CLOCK: [2023-10-31 Tue 13:49]--[2023-10-31 Tue 13:51] =>  0:02
+CLOCK: [2023-10-25 Wed 09:55]--[2023-10-25 Wed 10:24] =>  0:29
+CLOCK: [2023-10-24 Tue 09:03]--[2023-10-24 Tue 09:20] =>  0:17
+CLOCK: [2023-10-20 Fri 09:53]--[2023-10-20 Fri 10:05] =>  0:12
+CLOCK: [2023-10-20 Fri 09:16]--[2023-10-20 Fri 09:39] =>  0:23
+:END:
+Hosted at GitHub as a *detached* Repository
+
+#+begin_src sh :results output :exports both
+  tree -I '*.pyc|*.*#|*.org~|__pycache__' 2>&1
+#+end_src
+
+#+RESULTS:
+#+begin_example
+.
+├── bunch
+│   ├── a_sample_variable.py
+│   └── __init__.py
+├── LICENSE
+├── README.org
+└── tests
+    ├── __init__.py
+    └── test_arbitrary_variable.py
+
+2 directories, 6 files
+#+end_example
+
+** This simple project is an template
+for all following further Python projects
+
+*** E.g. it is a mould
+and all projects will derive out from there
+
+* Prerequisites
+
+** Emacs
+:LOGBOOK:
+CLOCK: [2023-10-31 Tue 14:27]
+:END:
+#+begin_src emacs-lisp -n :exports both
+  (princ (concat
+                  (format "Emacs version: %s\n"
+                          (emacs-version))
+                  (format "org version: %s\n"
+                          (org-version))))
+#+end_src
+
+#+RESULTS:
+: Emacs version: GNU Emacs 27.1 (build 1, x86_64-pc-linux-gnu, GTK+ Version 3.24.24, cairo version 1.16.0)
+:  of 2023-02-23, modified by Debian
+: org version: 9.6.11
+
+** Python
+#+begin_src sh :results output :exports both
+python --version 2>&1
+#+end_src
+
+#+RESULTS:
+: Python 3.9.2
