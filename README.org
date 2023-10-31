@@ -23,12 +23,16 @@ CLOCK: [2023-10-20 Fri 09:16]--[2023-10-20 Fri 09:39] =>  0:23
 Hosted at GitHub as a *detached* Repository
 
 #+begin_src sh :results output :exports both
-  tree -I '*.pyc|*.*#|*.org~|__pycache__' 2>&1
+  tree -I '*.pyc|*.*#|*.py~|*.org~|__pycache__' 2>&1
 #+end_src
 
 #+RESULTS:
 #+begin_example
 .
+├── apex
+│   ├── assignment.py
+│   ├── data_types.py
+│   └── __init__.py
 ├── bunch
 │   ├── a_sample_variable.py
 │   └── __init__.py
@@ -36,9 +40,10 @@ Hosted at GitHub as a *detached* Repository
 ├── README.org
 └── tests
     ├── __init__.py
-    └── test_arbitrary_variable.py
+    ├── test_arbitrary_variable.py
+    └── test_assignment.py
 
-2 directories, 6 files
+3 directories, 10 files
 #+end_example
 
 ** This simple project is an template
