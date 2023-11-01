@@ -12,7 +12,7 @@ class AssignmentTest(unittest.TestCase):
         self.assertEqual(N12, 23.71)
         self.assertEqual(students_number, 233)
 
-    def test_reassign_variable_value(self):
+    def test_reassigned_variable_value(self):
         n = 22
         self.assertEqual(n, 22)
 
