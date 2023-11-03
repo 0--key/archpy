@@ -18,3 +18,11 @@ n = 21  # <--the particular example with name and its integer value
 N12 = 23.71  # <--the longer valid name for variable and its value with
 # fractional part
 students_number = 233  # <-- the long name is a basement for clarity
+
+
+# special data for test hypothesis of immutability
+another_n = n
+yet_another_n = another_n
+# assignment never copies data
+another_n = 27
+yet_another_n = 28
