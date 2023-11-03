@@ -2,6 +2,9 @@ import unittest
 
 
 from apex.assignment import n, N12, students_number, another_n, yet_another_n
+from apex.extension import students_number as incr_students_number
+from extension import students_number as incr_twice_students_number
+from bunch.extension import students_number as decr_students_number
 
 
 class AssignmentTest(unittest.TestCase):
@@ -34,5 +37,19 @@ class DataMutationTest(unittest.TestCase):
 
     # but in the same time:
     def test_mutability_inter_assigned_variables(self):
-        self.n += self.n
+        self.n = n + 1
         self.assertEqual(self.n, 22)
+        self.assertEqual(n, 21)
+
+
+class ImportValuesTest(unittest.TestCase):
+    """Reuse already exising values"""
+
+    def test_neighbours_vaues(self):
+        self.assertEqual(incr_students_number, 234)
+
+    def test_siblings_values(self):
+        self.assertEqual(decr_students_number, 232)
+
+    def test_parents_vaues(self):
+        self.assertEqual(incr_twice_students_number, 235)
