@@ -37,10 +37,32 @@ class DataMutationTest(unittest.TestCase):
         self.assertEqual(yet_another_n, 28)
 
     # but in the same time:
+    # immutable types: strings, ints, froats, tuples
+    # and it is possible only ~to rebind~ thier values
     def test_mutability_inter_assigned_variables(self):
         self.n = n + 1
         self.assertEqual(self.n, 22)
         self.assertEqual(n, 21)
+
+    # listst are mutable type, and it is possible to modify them
+    # ~in place~:
+    def test_innate_mutation_method_for_mutable_types(self):
+        print(sample_list)
+        alias_of_sample_list = sample_list
+        sample_list.append('d')
+        # naturally, thesis
+        self.assertEqual(sample_list, ['a', 'b', 'c', 'd'])
+        # unexpectedly, counter-intuitive, anti-thesis
+        self.assertEqual(alias_of_sample_list, ['a', 'b', 'c', 'd'])
+
+    # but it's possible ~to rebind~ value of mutable variable
+    # =as well=
+    def test_rebind_value_of_mutable_variable(self):
+        # alias_of_sample_list = sample_list
+        print(sample_list)
+        sample_list = self.sample_list + ['d']
+        self.assertEqual(sample_list, ['a', 'b', 'c', 'd'])
+        self.assertEqual(alias_of_sample_list, ['a', 'b', 'c'])
 
 
 class ImportValuesTest(unittest.TestCase):
