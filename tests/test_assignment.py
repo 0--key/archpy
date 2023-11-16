@@ -6,6 +6,7 @@ from apex.extension import students_number as incr_students_number
 from extension import students_number as incr_twice_students_number
 from bunch.extension import students_number as decr_students_number
 
+sample_list = ['a', 'b', 'c']
 
 class AssignmentTest(unittest.TestCase):
     """The first and foremost to know"""
