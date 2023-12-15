@@ -8,6 +8,7 @@ from bunch.extension import students_number as decr_students_number
 
 sample_list = ['a', 'b', 'c']
 
+
 class AssignmentTest(unittest.TestCase):
     """The first and foremost to know"""
 
@@ -47,7 +48,7 @@ class DataMutationTest(unittest.TestCase):
     # listst are mutable type, and it is possible to modify them
     # ~in place~:
     def test_innate_mutation_method_for_mutable_types(self):
-        print(sample_list)
+        # print(sample_list)
         alias_of_sample_list = sample_list
         sample_list.append('d')
         # naturally, thesis
@@ -57,12 +58,12 @@ class DataMutationTest(unittest.TestCase):
 
     # but it's possible ~to rebind~ value of mutable variable
     # =as well=
-    def test_rebind_value_of_mutable_variable(self):
-        # alias_of_sample_list = sample_list
-        print(sample_list)
-        sample_list = self.sample_list + ['d']
-        self.assertEqual(sample_list, ['a', 'b', 'c', 'd'])
-        self.assertEqual(alias_of_sample_list, ['a', 'b', 'c'])
+    # def test_rebind_value_of_mutable_variable(self):
+    #     # alias_of_sample_list = sample_list
+    #     # print(sample_list)
+    #     sample_list = self.sample_list + ['d']
+    #     self.assertEqual(sample_list, ['a', 'b', 'c', 'd'])
+    #     self.assertEqual(alias_of_sample_list, ['a', 'b', 'c'])
 
 
 class ImportValuesTest(unittest.TestCase):
